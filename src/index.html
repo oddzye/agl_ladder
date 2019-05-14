@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Amateur Gaming League</title>
+</head>
+<body>
+    <div id="enter-email__modal" class="modal" style="text-align: center;">
+            <h3 class="modal-title">Укажите свой e-mail</h3>
+            <form class="sub-form" action="">
+                    <div class="group">      
+                            <input type="email" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label">E-mail...</label>
+                    </div>
+                    <button type="submit" class="standart-btn__mini">Подписаться</button>
+            </form>
+            
+    </div>
+              
+    <main class="main">
+        <div class="send-email__alert">Письмо с активацией подписки было отправлено на указанный e-mail</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                        <h1 class="main-title">Amateur <br> Gaming <span class="main-title__blue">League</span></h1>
+                        <p class="main-descr">
+                            Мы вышлем уведомление, когда поле боя будет готово.
+                        </p>
+                        <a href="#enter-email__modal" rel="modal:open" class="standart-btn sub-btn">Подписаться</a>
+                        <div class="vk-link">
+                            <a href="https://vk.com/ag_league"><i class="fa fa-vk fa-2x vk-icon" aria-hidden="true"></i></a>
+                        </div>
+                        <a href="#current-bracket" class="current-bracket__link">
+                            Сетка Ironsight Fastcup #3
+                            <i class="fa fa-arrow-right arrow-bracket__icon" aria-hidden="true"></i>
+                        </a>
+                </div>
+            </div>
+        </div> 
+    </main>
+    <section id="current-bracket" class="current-bracket">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                        <h2 class="current-bracket__title">Турнирна сетка Ironsight Fastcup #3</h2>
+                </div>
+            </div>
+        </div>
+            
+            <iframe width="75%" height="800" src="https://widget.toornament.com/tournaments/2460988397734649856/stages/2460988977779703808/?_locale=ru_RU&theme=light" frameborder="0" allowfullscreen="true"></iframe>
+    </section>
+
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script>
+        $( "#enter-email__modal" ).submit(function( event ) {
+            event.preventDefault();
+            console.log("submited");
+            $.modal.close();
+            $(".send-email__alert").css("display", "block");
+        });
+    </script>
+</body>
+</html>
